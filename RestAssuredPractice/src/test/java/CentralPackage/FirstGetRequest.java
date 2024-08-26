@@ -30,6 +30,7 @@ public class FirstGetRequest {
 		//using given, when, then
 		RestAssured.baseURI="https://reqres.in/api/users?page=2";
 		RestAssured.given().queryParam("page", "2").when().get().then().statusCode(200);
+		//hello this is day 1
 		
 		
 	}
