@@ -38,5 +38,11 @@ Query Parameters:
 Headers/Cookies
 	- meta-data associated with the API request and response
 	- Example: Authorization Details	
+	
 End Point Request URL can be created as below
 	- Base URL/ resource/(query/path)parameters
+	
+Rest Assured works with given, when and then
+	- Given: All Input Details
+	-When: Submit the API
+	-Then: Validate the response
