@@ -1,2 +1,42 @@
 Rest Assured Notes:
 lets start
+
+
+-> Basic Example i.e why we need API?
+
+	- In Early days of web, both front-end and back-end were written in the same language
+	- The raise in competition and emerging of new front-end technologies, companies started to use new technologies for front-end and back-end language was the same as earlier
+	- In order to remove the barrier between the languages API were introduced which are independent of all programming languages.
+	- Instead of direct communication b/w front-end and back-end API stood as a middle man to solve the issue.
+	- so, from front-end(client) an HTTP Request will be sent to API, which interacts with the server(back-end, database) and returns the response.
+-> What is API?
+	- API stands for Application Programming Interface	is an interface or communication protocol between client and server.
+
+JSON/XML -> Representation of Data(API are written in either of these)
+
+Requirements:  
+
+End point/Base URI: Address where API is hosted on Server.
+
+HTTP methods which are commonly used to communicate with Rest API's are:
+	-> GET, PUT, POST,DELETE
+	- GET to call an API, to extract information from the given server using a given URI
+	- POST to create something on server
+	- PUT will replace the existing representations on the server
+	- DELETE to remove something in server
+	
+Path Parameters:
+	- are variable parts of a URL path(URL contains resource and base URL )
+	- example : google.com/maps (google.com is base URL and maps is resource/collection)
+	- https://www.amazon.com/orders/112 (where 112 is a path parameter from orders collection)
+	
+Query Parameters:
+	- Query Parameter is used to sort/filter the resources
+	- Query Parameters are identified with "?"
+	- Example : https://amazon.com/orders?sort_by=2/20/2020
+
+Headers/Cookies
+	- meta-data associated with the API request and response
+	- Example: Authorization Details	
+End Point Request URL can be created as below
+	- Base URL/ resource/(query/path)parameters
