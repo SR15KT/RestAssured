@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CentralPackage.FirstPostRequest">
+      <class name="CentralPackage.LibraryAPI">
         <methods>
-          <include name="testCase03_GetPlace"/>
+          <include name="testCase01_postBook"/>
         </methods>
-      </class> <!-- CentralPackage.FirstPostRequest -->
+      </class> <!-- CentralPackage.LibraryAPI -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
