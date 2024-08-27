@@ -87,5 +87,23 @@ public class PayLoad {
 				+ "}";
 	}
 	
+	public static String libraryAPIData(String name,String id) {
+		return "{\r\n"
+				+ "\r\n"
+				+ "\"name\":\"Learn Appium Automation with Java\",\r\n"
+				+ "\"isbn\":\""+name+"\",\r\n"
+				+ "\"aisle\":\""+id+"\",\r\n"
+				+ "\"author\":\"John foe\"\r\n"
+				+ "}\r\n"
+				+ "";
+		}
 	
+	public static String postBook(String name,String id) {
+		return "{\r\n"
+				+ " \r\n"
+				+ "\"ID\" : \""+name+id+"\"\r\n"
+				+ " \r\n"
+				+ "} \r\n"
+				+ "";
+	}
 }
