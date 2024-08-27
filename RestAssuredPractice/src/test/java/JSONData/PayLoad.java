@@ -85,7 +85,7 @@ public class PayLoad {
 				+ "]\r\n"
 				+ "\r\n"
 				+ "}";
-	}//hiiiia
+	}
 	
 	public static String libraryAPIData(String name,String id) {
 		return "{\r\n"
