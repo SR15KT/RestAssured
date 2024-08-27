@@ -15,17 +15,7 @@ public class LibraryAPI {
 		String res=given().header("content-type","application/json").body(PayLoad.libraryAPIData(name,id))
 		.when().post("/Library/Addbook.php")
 		.then().assertThat().statusCode(200).extract().response().asString();
-		System.out.println(res);
-//		
-//		
-		// get book
-		
-//		given().log().all().header("content-type","application/json").
-//		when().get("/Library/GetBook.php?AuthorName=John foe")
-//		.then().log().all().assertThat().statusCode(200);
-//	
-		
-		
+		System.out.println(res);	
 	}
 	@Test(dataProvider="data")
 	void testCase02_deleteBook(String name,String id) {
