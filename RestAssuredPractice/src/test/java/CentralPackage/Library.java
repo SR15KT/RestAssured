@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import JSONData.PayLoad;
 import io.restassured.RestAssured;
 
-public class LibraryAPI {
+public class Library {
 	@Test(dataProvider="data",enabled=true)
 	void testCase01_postBook(String name,String id) {
 		RestAssured.baseURI="http://216.10.245.166";
