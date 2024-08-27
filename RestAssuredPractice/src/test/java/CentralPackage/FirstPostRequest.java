@@ -13,10 +13,11 @@ import static org.hamcrest.Matchers.*;
 public class FirstPostRequest {
 	public static String Place_id;
 	public static String address;
+	
+	
 	@Test(enabled=false)
 	void testCase01_AddPlace() {
 		RestAssured.baseURI="https://rahulshettyacademy.com";
-		
 		
 				//given - all input details 
 				//when - Submit the API -resource,http method
@@ -47,19 +48,17 @@ public class FirstPostRequest {
 	}
 
 	// Add place -> update place with new address -> Get Place to validate new address is present in response
-		@Test(priority=2)
-		void testCase02_UpdatePlace() {
-			
+		
+	@Test(priority=2)
+		void testCase02_UpdatePlace() {			
 		RestAssured.baseURI="https://rahulshettyacademy.com";
 		String response=given().log().all().queryParam("key", "qaclick123").header("content-type","application/json").body(PayLoad.addPlace())
 		.when().post("maps/api/place/add/json")
 		.then().log().all().assertThat().statusCode(200).extract().response().asString();
-		
-		//System.out.println(response);
 		JsonPath js=new JsonPath(response);
-		 Place_id=js.getString("place_id");
-		 address="70 winter walk, USA";
-		 System.out.println(Place_id); 
+		Place_id=js.getString("place_id");
+		address="70 winter walk, USA";
+		System.out.println(Place_id); 
 		
 		
 		given().log().all().queryParam("key", "qaclick123").header("content-type","application/json").body(PayLoad.updatePlace(Place_id))
@@ -78,6 +77,7 @@ public class FirstPostRequest {
 			
 			JsonPath js=new JsonPath(response);
 			System.out.println(js.getString("address"));
+			Assert.assertEquals(js.getString("address"), address);
 		} 
 		
 
