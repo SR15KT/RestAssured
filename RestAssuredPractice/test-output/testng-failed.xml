@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CentralPackage.LibraryAPI">
+      <class name="CentralPackage.CreateAndUpdateJIRA">
         <methods>
-          <include name="testCase01_postBook"/>
+          <include name="addScreenshot"/>
         </methods>
-      </class> <!-- CentralPackage.LibraryAPI -->
+      </class> <!-- CentralPackage.CreateAndUpdateJIRA -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
