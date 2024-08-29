@@ -1,4 +1,4 @@
-package CentralPackage;
+package pojo;
 import static io.restassured.RestAssured.*;
 
 import java.util.ArrayList;
@@ -7,8 +7,6 @@ import java.util.List;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
-import pojo.AddPlace;
-import pojo.Location;
 
 public class Serialization {
 	@Test
