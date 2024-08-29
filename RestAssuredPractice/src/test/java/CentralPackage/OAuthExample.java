@@ -3,6 +3,7 @@ package CentralPackage;
 import org.testng.annotations.Test;
 
 import io.restassured.path.json.JsonPath;
+import pojo.*;
 
 import static io.restassured.RestAssured.*;
 
@@ -22,10 +23,14 @@ public class OAuthExample {
 			
 			
 			
-			String response2=given().log().all().
+			GetCourse gc=given().log().all().
 			queryParam("access_token",accessToken).
-			when().get("https://rahulshettyacademy.com/oauthapi/getCourseDetails?access_token=NKfRLGLaxHVROGwjrbb9Ew==").asString();
-			System.out.println(response2);
+			when().get("https://rahulshettyacademy.com/oauthapi/getCourseDetails?access_token=NKfRLGLaxHVROGwjrbb9Ew==").as(GetCourse.class);	
+			System.out.println(gc);
+			System.out.println(gc.getLinkedIn());
+			System.out.println(gc.getInstructor());
+		System.out.println(	gc.getCourses().getApi().get(1).getCourseTitle());
+			
 		}
 		
 		
