@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CentralPackage.Serialization">
+      <class name="TestRailApiConnection.ReportsAPiCall">
         <methods>
-          <include name="serialization"/>
+          <include name="testRail_addAttachments"/>
         </methods>
-      </class> <!-- CentralPackage.Serialization -->
+      </class> <!-- TestRailApiConnection.ReportsAPiCall -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
